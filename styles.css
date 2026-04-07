@@ -182,7 +182,7 @@ address { font-style: normal; }
   max-width: 1180px;
   margin: 0 auto;
   padding: 0 24px;
-  height: 86px;
+  height: 104px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -192,13 +192,13 @@ address { font-style: normal; }
 .brand {
   display: flex;
   align-items: center;
-  gap: 16px;
+  gap: 18px;
   flex-shrink: 0;
 }
 .brand-logo {
-  height: 64px;
+  height: 84px;
   width: auto;
-  border-radius: 8px;
+  border-radius: 10px;
 }
 .brand-text { display: flex; flex-direction: column; }
 .brand-name { font-weight: 700; font-size: 1.18rem; color: var(--navy); line-height: 1.2; }
@@ -251,7 +251,7 @@ address { font-style: normal; }
   position: relative;
   min-height: 100vh;
   background: var(--white);
-  padding-top: 86px;
+  padding-top: 104px;
   display: flex;
   flex-direction: column;
 }
@@ -961,28 +961,36 @@ address { font-style: normal; }
   .nav-menu {
     display: none;
     position: absolute;
-    top: 86px; left: 0; right: 0;
+    top: 104px; left: 0; right: 0;
     background: var(--white);
     border-bottom: 1px solid var(--border);
     flex-direction: column;
-    padding: 16px 20px 24px;
-    gap: 4px;
+    align-items: stretch;
+    padding: 12px 20px 24px;
+    gap: 2px;
     box-shadow: var(--shadow);
   }
   .nav-menu.open { display: flex; }
-  /* Regular nav links */
-  .nav-menu a    { padding: 13px 16px; font-size: 1.05rem; border-radius: 8px; }
-  /* CTA button: clear visual separation from links above */
+  /* Regular nav links: left-aligned, full-width tap targets */
+  .nav-menu a {
+    display: block;
+    text-align: left;
+    padding: 14px 16px;
+    font-size: 1.05rem;
+    border-radius: 8px;
+    border-bottom: 1px solid var(--border);
+  }
+  .nav-menu a:last-of-type { border-bottom: none; }
+  /* CTA button: full width, separated from links */
   .nav-cta {
-    margin-left: 0;
-    margin-top: 16px;
-    padding: 14px 16px !important;
-    justify-content: center;
+    display: block !important;
+    width: 100%;
+    margin: 18px 0 0 0 !important;
+    padding: 16px 20px !important;
     text-align: center;
+    border: none !important;
     border-radius: 10px !important;
-    font-size: 1.05rem !important;
-    border-top: 1px solid var(--border);
-    padding-top: 14px !important;
+    font-size: 1.08rem !important;
   }
 
   /* Improve readability of body text on mobile */
