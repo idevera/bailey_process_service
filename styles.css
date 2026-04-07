@@ -956,7 +956,10 @@ address { font-style: normal; }
 
   .section-intro { flex-direction: column; align-items: flex-start; }
   .coverage-top  { flex-direction: column; align-items: flex-start; }
-  .steps         { flex-direction: column; align-items: center; }
+  .steps         {
+    grid-template-columns: 1fr;
+    justify-items: center;
+  }
   .step          { width: 100%; max-width: 420px; min-width: unset; }
   .step-arrow    { display: none; }
 
