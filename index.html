@@ -323,8 +323,7 @@
           </div>
 
           <div class="contact-form-wrap">
-            <form class="cform" action="#" data-u="Baileyproserv" data-d="gmail.com"
-                  method="post" enctype="text/plain"
+            <form class="cform" data-u="Baileyproserv" data-d="gmail.com"
                   aria-label="Service request form">
               <h3 class="cform-title">Send a Message</h3>
 
@@ -460,8 +459,23 @@
       });
     });
     document.querySelectorAll('form[data-u][data-d]').forEach(function(f) {
-      f.addEventListener('submit', function() {
-        f.setAttribute('action', 'mai' + 'lto:' + buildEmail(f));
+      f.addEventListener('submit', function(e) {
+        e.preventDefault();
+        if (!f.checkValidity()) { f.reportValidity(); return; }
+        var get = function(n) { var el = f.querySelector('[name="'+n+'"]'); return el ? el.value : ''; };
+        var name    = get('name');
+        var email   = get('email');
+        var county  = get('county');
+        var message = get('message');
+        var subject = 'Service Request from ' + name;
+        var body    = 'Name: ' + name + '\n'
+                    + 'Email: ' + email + '\n'
+                    + 'County: ' + county + '\n\n'
+                    + 'Details:\n' + message;
+        var url = 'mai' + 'lto:' + buildEmail(f)
+                + '?subject=' + encodeURIComponent(subject)
+                + '&body=' + encodeURIComponent(body);
+        window.location.href = url;
       });
     });
 
