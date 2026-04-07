@@ -377,18 +377,20 @@ address { font-style: normal; }
 
 .hero-ring {
   position: absolute;
-  width: 380px; height: 380px;
+  width: 360px; height: 360px;
   border-radius: 50%;
-  background: var(--cream);
+  background: radial-gradient(circle at 30% 30%, #ffffff 0%, var(--cream) 70%);
+  border: 1px solid var(--border);
+  box-shadow: 0 30px 80px -20px rgba(13,31,68,0.25), inset 0 0 0 1px rgba(255,255,255,0.6);
   z-index: 0;
 }
 .hero-ring-2 {
   position: absolute;
   width: 440px; height: 440px;
   border-radius: 50%;
-  border: 1.5px dashed rgba(13,31,68,0.1);
+  border: 1.5px dashed rgba(13,31,68,0.18);
   z-index: 0;
-  animation: ring-spin 30s linear infinite;
+  animation: ring-spin 40s linear infinite;
 }
 @keyframes ring-spin {
   from { transform: rotate(0deg); }
@@ -398,9 +400,15 @@ address { font-style: normal; }
 .hero-logo-img {
   position: relative;
   z-index: 1;
-  width: clamp(220px, 28vw, 300px);
-  border-radius: 12px;
-  filter: drop-shadow(0 8px 24px rgba(13,31,68,0.15));
+  width: clamp(240px, 30vw, 320px);
+  height: auto;
+  aspect-ratio: 1 / 1;
+  object-fit: contain;
+  background: var(--white);
+  padding: 18px;
+  border-radius: 50%;
+  box-shadow: 0 20px 50px -12px rgba(13,31,68,0.35),
+              0 0 0 1px var(--border);
 }
 
 /* Speed line accents (echo logo motif) */
