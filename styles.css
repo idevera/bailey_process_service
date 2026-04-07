@@ -186,11 +186,12 @@ address { font-style: normal; }
   box-shadow: var(--shadow-sm);
 }
 
+:root { --nav-h: 104px; }
 .nav {
   max-width: 1180px;
   margin: 0 auto;
   padding: 0 24px;
-  height: 104px;
+  height: var(--nav-h);
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -259,7 +260,7 @@ address { font-style: normal; }
   position: relative;
   min-height: 100vh;
   background: var(--white);
-  padding-top: 104px;
+  padding-top: var(--nav-h, 104px);
   display: flex;
   flex-direction: column;
 }
@@ -956,8 +957,12 @@ address { font-style: normal; }
   .hamburger { display: flex; }
   .nav-menu {
     display: none;
-    position: absolute;
-    top: 104px; left: 0; right: 0;
+    position: fixed;
+    top: var(--nav-h, 104px); left: 0; right: 0;
+    max-height: calc(100vh - var(--nav-h, 104px));
+    max-height: calc(100dvh - var(--nav-h, 104px));
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
     background: var(--white);
     border-bottom: 1px solid var(--border);
     flex-direction: column;
@@ -994,6 +999,30 @@ address { font-style: normal; }
   .field-label { font-size: 0.85rem; }
   .field-group input,
   .field-group textarea { font-size: 1rem; padding: 13px 16px; }
+}
+
+/* Small phones (iPhone SE 375px and below) — tighter header so dropdown fits */
+@media (max-width: 480px) {
+  :root { --nav-h: 76px; }
+  .brand-logo { height: 56px; border-radius: 8px; }
+  .brand-name { font-size: 1rem; }
+  .brand-loc  { font-size: 0.72rem; }
+  .brand { gap: 12px; }
+  .nav { padding: 0 16px; }
+  .container { padding: 0 18px; }
+  .nav-menu { padding: 10px 16px 18px; }
+  .nav-menu a { padding: 13px 14px; font-size: 1rem; }
+  .hamburger { padding: 8px; }
+}
+
+/* Extra-small phones (320px iPhone SE 1st gen) */
+@media (max-width: 360px) {
+  :root { --nav-h: 68px; }
+  .brand-logo { height: 48px; }
+  .brand-name { font-size: 0.95rem; }
+  .brand-loc  { font-size: 0.68rem; }
+  .nav { padding: 0 12px; }
+  .container { padding: 0 14px; }
 }
 
 @media (max-width: 600px) {
