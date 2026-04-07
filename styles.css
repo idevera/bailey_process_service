@@ -1043,7 +1043,17 @@ address { font-style: normal; }
 @media (max-width: 600px) {
   .svc-item { grid-template-columns: 40px 1fr; }
   .svc-icon { display: none; }
-  .contact-form-wrap { padding: 28px 20px; }
+  /* Full-width Send a Message card: edge to edge of viewport */
+  .contact .container { padding: 0; }
+  .contact-grid { gap: 32px; }
+  .contact-info { padding: 0 18px; }
+  .contact-form-wrap {
+    width: 100%;
+    padding: 32px 20px;
+    border-radius: 0;
+    border-left: none;
+    border-right: none;
+  }
   .footer-grid { grid-template-columns: 1fr; }
   .stats-row { flex-direction: column; }
   .stat-block { border-bottom: 1px solid rgba(255,255,255,0.08); }
