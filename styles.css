@@ -981,17 +981,8 @@ address { font-style: normal; }
     border-bottom: 1px solid var(--border);
   }
   .nav-menu a:last-of-type { border-bottom: none; }
-  /* CTA button: full width, separated from links */
-  .nav-cta {
-    display: block !important;
-    width: 100%;
-    margin: 18px 0 0 0 !important;
-    padding: 16px 20px !important;
-    text-align: center;
-    border: none !important;
-    border-radius: 10px !important;
-    font-size: 1.08rem !important;
-  }
+  /* Hide CTA in mobile dropdown — link list is enough */
+  .nav-menu .nav-cta { display: none !important; }
 
   /* Improve readability of body text on mobile */
   body { font-size: 17px; }
