@@ -964,13 +964,39 @@ address { font-style: normal; }
     background: var(--white);
     border-bottom: 1px solid var(--border);
     flex-direction: column;
-    padding: 12px 20px 20px;
-    gap: 2px;
+    padding: 16px 20px 24px;
+    gap: 4px;
     box-shadow: var(--shadow);
   }
   .nav-menu.open { display: flex; }
-  .nav-menu a    { padding: 12px 14px; font-size: 1rem; border-radius: 8px; }
-  .nav-cta { margin-left: 0; margin-top: 8px; justify-content: center; text-align: center; }
+  /* Regular nav links */
+  .nav-menu a    { padding: 13px 16px; font-size: 1.05rem; border-radius: 8px; }
+  /* CTA button: clear visual separation from links above */
+  .nav-cta {
+    margin-left: 0;
+    margin-top: 16px;
+    padding: 14px 16px !important;
+    justify-content: center;
+    text-align: center;
+    border-radius: 10px !important;
+    font-size: 1.05rem !important;
+    border-top: 1px solid var(--border);
+    padding-top: 14px !important;
+  }
+
+  /* Improve readability of body text on mobile */
+  body { font-size: 17px; }
+  .hero-tagline { font-size: 1.05rem; }
+  .section-desc { font-size: 1rem; }
+  .svc-desc { font-size: 0.95rem !important; }
+  .pillar-desc { font-size: 0.97rem; }
+  .step-desc { font-size: 0.95rem; }
+  .coverage-intro { font-size: 1rem; }
+  .county-cloud li { font-size: 0.92rem; padding: 8px 18px; }
+  .contact-intro { font-size: 1rem; }
+  .field-label { font-size: 0.85rem; }
+  .field-group input,
+  .field-group textarea { font-size: 1rem; padding: 13px 16px; }
 }
 
 @media (max-width: 600px) {
@@ -981,7 +1007,19 @@ address { font-style: normal; }
   .stats-row { flex-direction: column; }
   .stat-block { border-bottom: 1px solid rgba(255,255,255,0.08); }
   .stat-block:last-child { border-bottom: none; }
-  .hero-title { font-size: clamp(3.5rem, 18vw, 5rem); }
+  .hero-title { font-size: clamp(3.2rem, 17vw, 5rem); }
+
+  /* Larger readable text on small phones */
+  .svc-name { font-size: 1.25rem !important; }
+  .section-title { font-size: clamp(1.8rem, 7vw, 2.4rem); }
+  .stat-n { font-size: 2.2rem; }
+  .pillar-title { font-size: 1.25rem; }
+  .step-title { font-size: 1.15rem; }
+  .footer-nav a { font-size: 0.95rem; }
+  .footer-tagline { font-size: 0.9rem; }
+
+  /* Services section: more breathing room per item */
+  .svc-item { padding: 22px 12px; gap: 16px; }
 }
 
 @media (prefers-reduced-motion: reduce) {
