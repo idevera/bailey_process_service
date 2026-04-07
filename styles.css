@@ -72,11 +72,19 @@ address { font-style: normal; }
 }
 .skip-link:focus { top: 0; }
 
-/* Visible focus ring for keyboard nav */
+/* Visible focus ring for keyboard nav (WCAG 2.4.7, 1.4.11)
+   Navy outline on light bgs (13:1), white outline on dark bgs (13:1) */
 :focus-visible {
-  outline: 3px solid var(--teal);
+  outline: 3px solid var(--navy);
   outline-offset: 3px;
   border-radius: 4px;
+  box-shadow: 0 0 0 5px rgba(255,255,255,0.9);
+}
+.services :focus-visible,
+.process  :focus-visible,
+.site-footer :focus-visible {
+  outline-color: var(--white);
+  box-shadow: 0 0 0 5px rgba(13,31,68,0.9);
 }
 
 /* ── SCROLL PROGRESS ─────────────────────────────────── */
