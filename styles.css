@@ -982,7 +982,8 @@ address { font-style: normal; }
   }
   .nav-menu a:last-of-type { border-bottom: none; }
   /* Hide CTA in mobile dropdown — link list is enough */
-  .nav-menu .nav-cta { display: none !important; }
+  .nav-menu .nav-cta,
+  .nav-menu li:has(.nav-cta) { display: none !important; }
 
   /* Improve readability of body text on mobile */
   body { font-size: 17px; }
