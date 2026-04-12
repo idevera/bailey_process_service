@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Bailey Process Service delivers fast, reliable, professional legal documents across 15+ counties in Western Washington. Locally owned and operated.">
-  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data: https://raw.githubusercontent.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://cdnjs.cloudflare.com; font-src 'self' https://fonts.gstatic.com https://cdnjs.cloudflare.com data:; script-src 'self' 'unsafe-inline'; connect-src 'self'; form-action 'none'; base-uri 'self'; object-src 'none'">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data:; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://cdnjs.cloudflare.com; font-src 'self' https://fonts.gstatic.com https://cdnjs.cloudflare.com data:; script-src 'self' 'unsafe-inline'; connect-src 'self'; form-action 'none'; base-uri 'self'; object-src 'none'">
   <meta http-equiv="X-Content-Type-Options" content="nosniff">
   <meta name="referrer" content="strict-origin-when-cross-origin">
   <title>Bailey Process Service | Washington State Process Server</title>
@@ -52,11 +52,18 @@
     "url": "https://baileyprocessservice.com",
     "logo": "https://baileyprocessservice.com/og-image.png",
     "description": "Fast, reliable, professional legal document delivery across 15+ counties in Western Washington. Locally owned and operated.",
-    "areaServed": {
-      "@type": "Place",
-      "name": "Western Washington"
-    },
-    "serviceType": ["Process Serving", "Legal Courier", "Substitute Service", "Rush Service", "Document Delivery"]
+    "areaServed": [
+      {"@type": "State", "name": "Washington"},
+      {"@type": "AdministrativeArea", "name": "King County, Washington"},
+      {"@type": "AdministrativeArea", "name": "Pierce County, Washington"},
+      {"@type": "AdministrativeArea", "name": "Snohomish County, Washington"},
+      {"@type": "AdministrativeArea", "name": "Thurston County, Washington"},
+      {"@type": "AdministrativeArea", "name": "Kitsap County, Washington"},
+      {"@type": "City", "name": "Seattle, Washington"},
+      {"@type": "City", "name": "Tacoma, Washington"}
+    ],
+    "serviceType": ["Process Serving", "Legal Courier", "Substitute Service", "Rush Service", "Document Delivery"],
+    "knowsAbout": ["RCW Title 4", "Service of Process", "Legal Document Delivery", "Court Filing"]
   }
   </script>
 </head>
