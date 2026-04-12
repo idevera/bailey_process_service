@@ -1,1 +1,535 @@
-Will read from file
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Bailey Process Service delivers fast, reliable, professional legal documents across 15+ counties in Western Washington. Locally owned and operated.">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data: https://raw.githubusercontent.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://cdnjs.cloudflare.com; font-src 'self' https://fonts.gstatic.com https://cdnjs.cloudflare.com data:; script-src 'self' 'unsafe-inline'; connect-src 'self'; form-action 'none'; base-uri 'self'; object-src 'none'">
+  <meta http-equiv="X-Content-Type-Options" content="nosniff">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  <title>Bailey Process Service | Washington State Process Server</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600&display=swap" rel="stylesheet">
+  <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+        integrity="sha512-Avb2QiuDEEvB4bZJYdft2mNjVShBftLdPG8FJ0V7irTLQ8Uo0qcPxh4Plq7G5tGm0rU+1SPhVotteLpBERwTkw=="
+        crossorigin="anonymous"
+        referrerpolicy="no-referrer">
+  <link rel="stylesheet" href="styles.css?v=3">
+
+  <!-- Favicon / Tab Icon -->
+  <link rel="icon" href="favicon.ico" sizes="32x32">
+  <link rel="icon" href="icon-192.png" type="image/png" sizes="192x192">
+  <link rel="apple-touch-icon" href="icon-192.png">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Bailey Process Service | Washington State Process Server">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://baileyprocessservice.com/">
+  <meta property="og:image" content="https://baileyprocessservice.com/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Bailey Process Service - BPS logo">
+  <meta property="og:description" content="Fast, reliable, professional legal document delivery across 15+ counties in Western Washington.">
+  <meta property="og:site_name" content="Bailey Process Service">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Bailey Process Service | Washington State Process Server">
+  <meta name="twitter:description" content="Fast, reliable, professional legal document delivery across 15+ counties in Western Washington.">
+  <meta name="twitter:image" content="https://baileyprocessservice.com/og-image.png">
+
+  <!-- Canonical -->
+  <link rel="canonical" href="https://baileyprocessservice.com/">
+
+  <!-- Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LegalService",
+    "name": "Bailey Process Service",
+    "url": "https://baileyprocessservice.com",
+    "logo": "https://baileyprocessservice.com/og-image.png",
+    "description": "Fast, reliable, professional legal document delivery across 15+ counties in Western Washington. Locally owned and operated.",
+    "areaServed": {
+      "@type": "Place",
+      "name": "Western Washington"
+    },
+    "serviceType": ["Process Serving", "Legal Courier", "Substitute Service", "Rush Service", "Document Delivery"]
+  }
+  </script>
+</head>
+<body>
+
+  <!-- Skip link for keyboard/screen reader users -->
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
+  <!-- Scroll progress -->
+  <div class="progress-bar" id="progressBar" role="presentation" aria-hidden="true"></div>
+
+  <!-- ── NAVIGATION ─────────────────────────────────── -->
+  <header class="site-header" id="siteHeader" role="banner">
+    <nav class="nav" aria-label="Main navigation">
+      <a href="#hero" class="brand" aria-label="Bailey Process Service home">
+        <img src="data:image/jpeg;base64,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" alt="" class="brand-logo" aria-hidden="true">
+        <div class="brand-text">
+          <span class="brand-name">Bailey Process Service</span>
+          <span class="brand-loc">Washington State</span>
+        </div>
+      </a>
+      <button class="hamburger" id="navToggle" type="button"
+              aria-label="Open navigation menu" aria-expanded="false" aria-controls="navMenu"
+              aria-controls="navMenu">
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+      </button>
+      <ul class="nav-menu" id="navMenu" role="list">
+        <li><a href="#services">Services</a></li>
+        <li><a href="#coverage">Coverage</a></li>
+        <li><a href="#why-bps">About</a></li>
+        <li><a href="#how-it-works">Process</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="main-content">
+
+    <!-- ── HERO ──────────────────────────────────────── -->
+    <section class="hero" id="hero" aria-labelledby="hero-heading">
+      <div class="hero-bg-dots" aria-hidden="true"></div>
+      <div class="container">
+        <div class="hero-grid">
+
+          <div class="hero-content">
+            <p class="hero-eyebrow">
+              Washington State Process Server
+            </p>
+            <h1 class="hero-title" id="hero-heading">
+              <span class="ht-line ht-solid">Bailey</span>
+              <span class="ht-line ht-accent">Process</span>
+              <span class="ht-line ht-outline" aria-label="Service">Service</span>
+            </h1>
+            <p class="hero-tagline">
+              Locally owned. Delivering fast, reliable, and professional legal courier services across Washington State.
+            </p>
+            <ul class="hero-pills" role="list" aria-label="Key facts">
+              <li><i class="fas fa-map-marker-alt" aria-hidden="true"></i> 15+ Counties</li>
+              <li><i class="fas fa-shield-alt" aria-hidden="true"></i> WA RCW Compliant</li>
+              <li><i class="fas fa-bolt" aria-hidden="true"></i> Same-Day Available</li>
+            </ul>
+            <div class="hero-actions">
+              <a href="#contact" class="btn btn-primary">Request Service <i class="fas fa-arrow-right" aria-hidden="true"></i></a>
+              <a href="#services" class="btn btn-outline">Our Services</a>
+            </div>
+          </div>
+
+          <div class="hero-visual" aria-hidden="true">
+            <div class="hero-ring"></div>
+            <div class="hero-ring-2"></div>
+            <img src="data:image/jpeg;base64,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" alt="" class="hero-logo-img" aria-hidden="true">
+            <div class="speed-lines">
+              <div class="sl sl-a"></div>
+              <div class="sl sl-b"></div>
+              <div class="sl sl-c"></div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Scrolling ticker -->
+      <div class="ticker" aria-hidden="true">
+        <div class="ticker-track">
+          <span>Service of Process</span><span class="tkd">&#9670;</span>
+          <span>Substitute Service</span><span class="tkd">&#9670;</span>
+          <span>Rush &amp; Same-Day Available</span><span class="tkd">&#9670;</span>
+          <span>Service by Mail</span><span class="tkd">&#9670;</span>
+          <span>Declaration of Service</span><span class="tkd">&#9670;</span>
+          <span>15+ Washington Counties</span><span class="tkd">&#9670;</span>
+          <span>WA RCW Title 4 Compliant</span><span class="tkd">&#9670;</span>
+          <span>Locally Owned and Operated</span><span class="tkd">&#9670;</span>
+          <span>Service of Process</span><span class="tkd">&#9670;</span>
+          <span>Substitute Service</span><span class="tkd">&#9670;</span>
+          <span>Rush &amp; Same-Day Available</span><span class="tkd">&#9670;</span>
+          <span>Service by Mail</span><span class="tkd">&#9670;</span>
+          <span>Declaration of Service</span><span class="tkd">&#9670;</span>
+          <span>15+ Washington Counties</span><span class="tkd">&#9670;</span>
+          <span>WA RCW Title 4 Compliant</span><span class="tkd">&#9670;</span>
+          <span>Locally Owned and Operated</span><span class="tkd">&#9670;</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── SERVICES ───────────────────────────────────── -->
+    <section class="services" id="services" aria-labelledby="services-heading">
+      <div class="container">
+        <div class="section-intro">
+          <div>
+            <p class="section-label">What We Do</p>
+            <h2 class="section-title" id="services-heading">Legal Document<br>Delivery Services</h2>
+          </div>
+          <p class="section-desc">We handle every aspect of legal document service so you can focus on your case.</p>
+        </div>
+
+        <ul class="svc-list" role="list">
+          <li class="svc-item">
+            <span class="svc-num" aria-hidden="true">01</span>
+            <div class="svc-body">
+              <h3 class="svc-name">Service of Process</h3>
+              <p class="svc-desc">Personal delivery of summons, complaints, subpoenas, petitions for divorce, protection orders, personal injury, and writs. Served correctly, on time, every time.</p>
+            </div>
+            <i class="fas fa-file-contract svc-icon" aria-hidden="true"></i>
+          </li>
+          <li class="svc-item">
+            <span class="svc-num" aria-hidden="true">02</span>
+            <div class="svc-body">
+              <h3 class="svc-name">Substitute Service</h3>
+              <p class="svc-desc">When direct service is not possible, we serve authorized household members or other qualifying recipients per RCW Title 4.</p>
+            </div>
+            <i class="fas fa-home svc-icon" aria-hidden="true"></i>
+          </li>
+          <li class="svc-item">
+            <span class="svc-num" aria-hidden="true">03</span>
+            <div class="svc-body">
+              <h3 class="svc-name">Rush &amp; Same-Day Service</h3>
+              <p class="svc-desc">Urgent deadline? We offer expedited and same-day options to keep your case on schedule no matter the time pressure.</p>
+            </div>
+            <i class="fas fa-bolt svc-icon" aria-hidden="true"></i>
+          </li>
+          <li class="svc-item">
+            <span class="svc-num" aria-hidden="true">04</span>
+            <div class="svc-body">
+              <h3 class="svc-name">Service by Mail</h3>
+              <p class="svc-desc">Certified and first-class mail delivery with full documentation and proof of service.</p>
+            </div>
+            <i class="fas fa-envelope svc-icon" aria-hidden="true"></i>
+          </li>
+          <li class="svc-item">
+            <span class="svc-num" aria-hidden="true">05</span>
+            <div class="svc-body">
+              <h3 class="svc-name">Declaration of Service</h3>
+              <p class="svc-desc">Court-ready declarations returned promptly after every serve. Fully compliant with Washington State requirements and accepted by all Washington courts.</p>
+            </div>
+            <i class="fas fa-clipboard-check svc-icon" aria-hidden="true"></i>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ── COVERAGE ───────────────────────────────────── -->
+    <section class="coverage" id="coverage" aria-labelledby="coverage-heading">
+      <div class="container">
+        <div class="coverage-top">
+          <div>
+            <p class="section-label">Where We Work</p>
+            <h2 class="section-title" id="coverage-heading">Serving Washington</h2>
+            <p class="coverage-intro">We serve 15+ counties across Western Washington, with a focus on the Puget Sound region. We file and deliver to every Superior Court, and we act as a courier service as well.</p>
+          </div>
+          <a href="#contact" class="btn btn-navy">Ask About Your County <i class="fas fa-arrow-right" aria-hidden="true"></i></a>
+        </div>
+
+        <ul class="county-cloud" role="list" aria-label="Counties served">
+          <li>Pierce</li><li>Thurston</li><li>King</li>
+          <li>Snohomish</li><li>Kitsap</li><li>Mason</li>
+          <li>Lewis</li><li>Grays Harbor</li><li>Whatcom</li>
+          <li>Skagit</li><li>Cowlitz</li><li>Clark</li>
+          <li>Clallam</li><li>Jefferson</li><li>Pacific</li>
+          <li>Island</li>
+        </ul>
+
+        <p class="coverage-note">
+          Don't see your county? <a href="#contact">Reach out</a> and we will let you know if we can help.
+        </p>
+      </div>
+    </section>
+
+    <!-- ── WHY BPS ─────────────────────────────────────── -->
+    <section class="why" id="why-bps" aria-labelledby="why-heading">
+      <div class="container">
+        <div class="section-intro centered">
+          <div>
+            <p class="section-label">Why Choose BPS</p>
+            <h2 class="section-title" id="why-heading">Built on Trust,<br>Driven by Results</h2>
+          </div>
+        </div>
+
+        <div class="pillars" role="list">
+          <article class="pillar" role="listitem">
+            <div class="pillar-icon-wrap" aria-hidden="true">
+              <i class="fas fa-gavel"></i>
+            </div>
+            <h3 class="pillar-title">Full Legal Compliance</h3>
+            <p class="pillar-desc">Every serve follows Washington State RCW Title 4 and applicable federal rules. You receive court-ready proof of service, done right the first time.</p>
+          </article>
+          <article class="pillar" role="listitem">
+            <div class="pillar-icon-wrap" aria-hidden="true">
+              <i class="fas fa-map-marker-alt"></i>
+            </div>
+            <h3 class="pillar-title">Local Expertise</h3>
+            <p class="pillar-desc">We know Washington courts, roads, and regulations. Our local knowledge means fewer delays and faster results for your case.</p>
+          </article>
+          <article class="pillar" role="listitem">
+            <div class="pillar-icon-wrap" aria-hidden="true">
+              <i class="fas fa-bolt"></i>
+            </div>
+            <h3 class="pillar-title">Fast Turnaround</h3>
+            <p class="pillar-desc">Legal deadlines are critical. Same-day and rush options are available when time matters most. We keep your case moving forward.</p>
+          </article>
+        </div>
+
+        <div class="stats-row" role="list" aria-label="Key statistics">
+          <div class="stat-block" role="listitem">
+            <strong class="stat-n" data-target="15" data-suffix="+">15+</strong>
+            <span class="stat-l">Counties Served</span>
+          </div>
+          <div class="stat-sep" aria-hidden="true"></div>
+          <div class="stat-block" role="listitem">
+            <strong class="stat-n">100%</strong>
+            <span class="stat-l">WA Law Compliant</span>
+          </div>
+          <div class="stat-sep" aria-hidden="true"></div>
+          <div class="stat-block" role="listitem">
+            <strong class="stat-n">24/7</strong>
+            <span class="stat-l">Communication</span>
+          </div>
+          <div class="stat-sep" aria-hidden="true"></div>
+          <div class="stat-block" role="listitem">
+            <strong class="stat-n">Local</strong>
+            <span class="stat-l">Ownership</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── HOW IT WORKS ───────────────────────────────── -->
+    <section class="process" id="how-it-works" aria-labelledby="process-heading">
+      <div class="container">
+        <p class="section-label centered">Simple Process</p>
+        <h2 class="section-title centered" id="process-heading">Three Steps to Done</h2>
+
+        <div class="steps" role="list">
+          <article class="step" role="listitem">
+            <div class="step-num" aria-hidden="true">01</div>
+            <h3 class="step-title">Submit Your Request</h3>
+            <p class="step-desc"><a href="#" class="email-link" data-u="Baileyproserv" data-d="gmail.com" aria-label="Email Bailey Process Service">Send us an email</a> with the documents, party address, and your deadline.</p>
+          </article>
+          <div class="step-arrow" aria-hidden="true"><i class="fas fa-chevron-right"></i></div>
+          <article class="step" role="listitem">
+            <div class="step-num" aria-hidden="true">02</div>
+            <h3 class="step-title">We Serve</h3>
+            <p class="step-desc">We complete service in full compliance with Washington State law and your court requirements.</p>
+          </article>
+          <div class="step-arrow" aria-hidden="true"><i class="fas fa-chevron-right"></i></div>
+          <article class="step" role="listitem">
+            <div class="step-num" aria-hidden="true">03</div>
+            <h3 class="step-title">Receive Proof</h3>
+            <p class="step-desc">You receive a complete, court-ready declaration of service with all details needed for your case. Fast and documented.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── CONTACT ────────────────────────────────────── -->
+    <section class="contact" id="contact" aria-labelledby="contact-heading">
+      <div class="container">
+        <div class="contact-grid">
+
+          <div class="contact-info">
+            <p class="section-label">Get in Touch</p>
+            <h2 class="contact-title" id="contact-heading">Ready to Get<br>Started?</h2>
+            <p class="contact-intro">Contact us to request service or ask any questions. We make the process simple.</p>
+
+            <address class="contact-details">
+              <div class="contact-item">
+                <div class="ci-icon" aria-hidden="true"><i class="fas fa-envelope"></i></div>
+                <div class="ci-text">
+                  <strong>Email</strong>
+                  <a href="#" class="email-link" data-u="Baileyproserv" data-d="gmail.com" aria-label="Email Bailey Process Service">Click to email us</a>
+                </div>
+              </div>
+              <div class="contact-item">
+                <div class="ci-icon" aria-hidden="true"><i class="fas fa-map-marker-alt"></i></div>
+                <div class="ci-text">
+                  <strong>Service Area</strong>
+                  <span>Throughout Washington State</span>
+                </div>
+              </div>
+              <div class="contact-item">
+                <div class="ci-icon" aria-hidden="true"><i class="fas fa-shield-alt"></i></div>
+                <div class="ci-text">
+                  <strong>Compliance</strong>
+                  <span>WA RCW Title 4 Certified</span>
+                </div>
+              </div>
+            </address>
+
+            <a href="#" class="btn btn-primary mt-btn email-link" data-u="Baileyproserv" data-d="gmail.com" aria-label="Email Bailey Process Service now">
+              <i class="fas fa-envelope" aria-hidden="true"></i> Email Us Now
+            </a>
+          </div>
+
+          <div class="contact-form-wrap">
+            <form class="cform" data-u="Baileyproserv" data-d="gmail.com"
+                  aria-label="Service request form">
+              <h3 class="cform-title">Send a Message</h3>
+
+              <div class="field-group">
+                <label for="f-name" class="field-label">Full Name <span class="req" aria-label="required">*</span></label>
+                <input type="text" id="f-name" name="name" autocomplete="name"
+                       placeholder="Your full name"
+                       required aria-required="true">
+              </div>
+              <div class="field-group">
+                <label for="f-email" class="field-label">Email Address <span class="req" aria-label="required">*</span></label>
+                <input type="email" id="f-email" name="email" autocomplete="email"
+                       placeholder="your@email.com"
+                       required aria-required="true">
+              </div>
+              <div class="field-group">
+                <label for="f-county" class="field-label">County</label>
+                <input type="text" id="f-county" name="county"
+                       placeholder="County where service is needed">
+              </div>
+              <div class="field-group">
+                <label for="f-msg" class="field-label">Service Details <span class="req" aria-label="required">*</span></label>
+                <textarea id="f-msg" name="message" rows="4"
+                          placeholder="Documents to serve, deadline, and any other details"
+                          required aria-required="true"></textarea>
+              </div>
+
+              <button type="submit" class="btn btn-primary btn-full">
+                <i class="fas fa-paper-plane" aria-hidden="true"></i> Send Request
+              </button>
+            </form>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ── FOOTER ─────────────────────────────────────────── -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <img src="data:image/jpeg;base64,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" alt="Bailey Process Service logo" class="footer-logo">
+          <p class="footer-name">Bailey Process Service</p>
+          <p class="footer-tagline">Fast. Reliable. Professional.</p>
+        </div>
+        <nav class="footer-nav" aria-label="Footer navigation">
+          <h3 class="footer-nav-title">Quick Links</h3>
+          <ul role="list">
+            <li><a href="#services">Services</a></li>
+            <li><a href="#coverage">Coverage</a></li>
+            <li><a href="#why-bps">About</a></li>
+            <li><a href="#how-it-works">How It Works</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </nav>
+        <div class="footer-contact">
+          <h3 class="footer-nav-title">Contact</h3>
+          <a href="#" class="footer-email email-link" data-u="Baileyproserv" data-d="gmail.com" aria-label="Email Bailey Process Service">Click to email us</a>
+          <p>Serving Washington State</p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&#169; 2026 Bailey Process Service. All rights reserved. Locally Owned and Operated in Washington State.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+  (function() {
+    // Scroll progress
+    var pb = document.getElementById('progressBar');
+    window.addEventListener('scroll', function() {
+      var h = document.body.scrollHeight - window.innerHeight;
+      if (h > 0) pb.style.width = (window.scrollY / h * 100) + '%';
+    }, { passive: true });
+
+    // Nav header scroll state
+    var hdr = document.getElementById('siteHeader');
+    window.addEventListener('scroll', function() {
+      hdr.classList.toggle('scrolled', window.scrollY > 40);
+    }, { passive: true });
+
+    // Mobile nav
+    var toggle = document.getElementById('navToggle');
+    var menu   = document.getElementById('navMenu');
+    toggle.addEventListener('click', function() {
+      var open = menu.classList.toggle('open');
+      toggle.setAttribute('aria-expanded', open);
+      toggle.setAttribute('aria-label', open ? 'Close navigation menu' : 'Open navigation menu');
+    });
+    menu.querySelectorAll('a').forEach(function(a) {
+      a.addEventListener('click', function() {
+        menu.classList.remove('open');
+        toggle.setAttribute('aria-expanded', 'false');
+        toggle.setAttribute('aria-label', 'Open navigation menu');
+      });
+    });
+
+    // Smooth scroll (skip email-link anchors)
+    document.querySelectorAll('a[href^="#"]').forEach(function(a) {
+      if (a.classList.contains('email-link')) return;
+      a.addEventListener('click', function(e) {
+        var href = this.getAttribute('href');
+        if (href === '#' || href.length < 2) return;
+        var t = document.querySelector(href);
+        if (t) { e.preventDefault(); t.scrollIntoView({ behavior: 'smooth', block: 'start' }); }
+      });
+    });
+
+    // Intersection Observer: fade-in
+    var io = new IntersectionObserver(function(entries) {
+      entries.forEach(function(e) { if (e.isIntersecting) e.target.classList.add('visible'); });
+    }, { threshold: 0.12 });
+    document.querySelectorAll('.reveal').forEach(function(el) { io.observe(el); });
+
+    // Stagger children
+    document.querySelectorAll('.stagger > *').forEach(function(el, i) {
+      el.style.transitionDelay = (i * 80) + 'ms';
+      io.observe(el);
+    });
+
+    // Email obfuscation: assemble address from data attributes only at click time
+    function buildEmail(el) {
+      return el.getAttribute('data-u') + String.fromCharCode(64) + el.getAttribute('data-d');
+    }
+    document.querySelectorAll('a.email-link').forEach(function(a) {
+      a.addEventListener('click', function(e) {
+        e.preventDefault();
+        window.location.href = 'mai' + 'lto:' + buildEmail(a);
+      });
+    });
+    document.querySelectorAll('form[data-u][data-d]').forEach(function(f) {
+      f.addEventListener('submit', function(e) {
+        e.preventDefault();
+        if (!f.checkValidity()) { f.reportValidity(); return; }
+        var get = function(n) { var el = f.querySelector('[name="'+n+'"]'); return el ? el.value : ''; };
+        var name    = get('name');
+        var email   = get('email');
+        var county  = get('county');
+        var message = get('message');
+        var subject = 'Service Request from ' + name;
+        var body    = 'Name: ' + name + '\n'
+                    + 'Email: ' + email + '\n'
+                    + 'County: ' + county + '\n\n'
+                    + 'Details:\n' + message;
+        var url = 'mai' + 'lto:' + buildEmail(f)
+                + '?subject=' + encodeURIComponent(subject)
+                + '&body=' + encodeURIComponent(body);
+        window.location.href = url;
+      });
+    });
+
+  })();
+  </script>
+
+</body>
+</html>
